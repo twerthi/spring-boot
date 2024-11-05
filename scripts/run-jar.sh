@@ -11,7 +11,9 @@ if [ -z "$jarPid" ]; then
     echo "No running process found"
 else
     echo "Killing process $jarPid"
-    kill -9 $jarPid
+    #kill -9 $jarPid
+    $(ps aux | grep logging-l4j2.jar | awk '{ print $2 }')
+    kill $jarPid
 fi
 
 # Execute the jar
