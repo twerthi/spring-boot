@@ -12,7 +12,7 @@ if [ -z "$jarPid" ]; then
 else
     echo "Killing process $jarPid"
     #kill -9 $jarPid
-    $(ps aux | grep logging-l4j2.jar | awk '{ print $2 }')
+    ps aux | grep logging-l4j2.jar | awk '{ print $2 }'
     kill $jarPid
 fi
 
