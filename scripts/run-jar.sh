@@ -4,7 +4,7 @@ filelocation=$(get_octopusvariable "Octopus.Action[Deploy Java Archive].Output.O
 echo "Octopus placed the deployed .jar here: $filelocation"
 
 # echo "Checking to see if there is a running process for the jar"
-# jarPid=$(ps aux | grep logging-l4j2.jar | awk '{ print $2 }')
+# jarPid=$(ps -ef | grep -v grep | grep logging-log4j2.jar| awk '{print $2}')
 
 # # Check to see if something was returned
 # if [ -z "$jarPid" ]; then
