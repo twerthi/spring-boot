@@ -1,7 +1,7 @@
 resource "octopusdeploy_git_credential" "gitcredential_github" {
   name     = "Github"
   type     = "UsernamePassword"
-  username = "twerthi"
+  username = "MyGitHubUsername"
   password = "${var.gitcredential_github}"
 }
 variable "gitcredential_github" {
