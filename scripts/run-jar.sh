@@ -18,3 +18,5 @@ echo "Octopus placed the deployed .jar here: $filelocation"
 
 # Execute the jar
 java -jar $filelocation >> /var/log/shawntest.log 2>&1 &
+
+ls
